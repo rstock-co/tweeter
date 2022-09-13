@@ -9,7 +9,7 @@ $(() => {
     const input = $(this).val();
     const numChars = input.length;
     let remainingChars = 140 - numChars;
-    const counter = $('output[name="counter"]');
+    const counter = $(this).parent().find('output[name="counter"]');
     counter.html(remainingChars);
 
     const scrollHeight = $("textarea").prop("scrollHeight");
