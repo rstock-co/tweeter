@@ -6,6 +6,7 @@
   width: 100%;
   background-color: #4056a1;
   color: #ffffff;
+  position: fixed
 }
 
 .navbar span {
@@ -27,7 +28,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .nav-item {
