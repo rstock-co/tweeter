@@ -7,6 +7,9 @@
 .tweet-button {
   background-color: #4056a1;
   color: #ffffff;
+  border: none;
+  outline: none;
+  padding: 4px;
 }
 
 .label {
@@ -24,7 +27,7 @@
   height: 40px;
   outline: none;
   margin-top: 20px;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 }
 
 .tweet-container {
