@@ -1,0 +1,44 @@
+.tweet-posts {
+    display: flex;
+    flex-direction: column;
+    border: 5px solid;
+    margin-top: 60px;
+    padding: 20px;
+}
+
+.tweet-post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    font-weight: 300;
+}
+
+.tweet-post-body {
+    font-weight: 600;
+    margin-left: 20px;
+
+}
+
+.tweet-post-footer {
+    border-top: 5px solid;
+}
+
+/* .line {
+    size="3";
+} */
+
+.avatar {
+    height: 75px;
+    width: 75px;
+}
+
+.avatar-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.user-handle {
+    margin-right: 20px;
+    opacity: 0.5;
+    font-weight: 600;
+  }
