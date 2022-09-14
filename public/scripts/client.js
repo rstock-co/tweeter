@@ -65,10 +65,10 @@ const data = [
 ]
 
 $(() => {
-  const createTweetElement = (tweet) => {
-    const {name, avatars, handle} = tweet.user;  
-    const text = tweet.content.text;
-    const created = tweet.created_at;
+  const createTweetElement = (data) => {
+    const {name, avatars, handle} = data.user;  
+    const text = data.content.text;
+    const created = data.created_at;
 
     const tweetHTML =
        `<article class="tweet-post">
@@ -99,11 +99,10 @@ $(() => {
   }
 
   const renderTweets = (tweetsDB) => {
-    tweetsDB.forEach(twt => {
-      console.log(twt)
-      const twtHTML = createTweetElement(twt);
-      console.log(twtHTML)
-      $(".display-tweets").append(twtHTML);
+    tweetsDB.forEach(tweet => {
+      const HTML = createTweetElement(tweet);
+      console.log(HTML)
+      $(".display-tweets").append(HTML);
     });
   } 
 
