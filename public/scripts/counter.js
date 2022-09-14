@@ -1,8 +1,7 @@
 /**
- *  Character Counter
- *  - Counts the number of remaining characters in tweet
- *  - Expands `textarea` box height if tweet is more than one line
- *  - Turns the counter red if user exceeds 140 character limit
+ *  Counts the number of remaining characters in a tweet
+ *  Expands `textarea` box height if tweet is more than one line
+ *  Turns the counter text red if user exceeds 140 character limit
  */
 
   $(() => {
