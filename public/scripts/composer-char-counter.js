@@ -4,7 +4,7 @@
  *  - Expands `textarea` box height if tweet is more than one line
  *  - Turns the counter red if user exceeds 140 character limit
  */
-const charCounter = () => {
+
   $(() => {
     const $textArea = $("textarea");
      
@@ -25,6 +25,3 @@ const charCounter = () => {
       }
     });
   });
-};
-
-charCounter();
