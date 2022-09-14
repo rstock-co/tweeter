@@ -1,4 +1,4 @@
-.tweet-posts {
+.tweet-post {
   display: flex;
   flex-direction: column;
   border: 5px solid;
@@ -38,13 +38,14 @@
   margin-right: 20px;
   opacity: 0.5;
   font-weight: 600;
+  color: #4056a1;
 }
 
-.tweet-posts:hover {
+.tweet-post:hover {
   box-shadow: 10px 10px 0px #b2bfea;
 }
 
-.tweet-posts:hover .user-handle {
+.tweet-post:hover .user-handle {
   opacity: 1;
 }
 

@@ -1,4 +1,4 @@
-.new-tweet {
+.tweet-entry {
   display: flex;
   flex-flow: column;
   width: 100%;
@@ -30,7 +30,7 @@
   margin-bottom: 10px;
 }
 
-.tweet-container {
+.tweet-entry-footer {
   display: flex;
   justify-content: space-between;
   font-family: "Bungee", cursive;
