@@ -44,12 +44,27 @@ const renderTweets = (tweetsDB) => {
 };
 
 const loadTweets = () => {
-  $.get('/tweets').then((data) => {
+  $.get("/tweets")
+    .then((data) => {
       renderTweets(data);
     })
     .catch((error) => {
       console.log(error);
     });
+};
+
+const errorCheck = (text) => {
+  const tweet = text.slice(5);
+  const error = {
+    isError: true,
+  };
+  if (tweet.length > 140) error.type = "Your tweet is too long.  Please use the counter to ensure your tweet is 140 characters or less.";
+  else if (tweet.length === 0) error.type = "Your tweet is empty.  Please type at least one character.";
+  else {
+    error.isError = false;
+  }
+
+  return error;
 };
 
 $(() => {
@@ -63,15 +78,21 @@ $(() => {
    * POST: /tweets
    */
 
-  $(".tweet-form").on('submit', function(event) {
+  $(".tweet-form").on("submit", function (event) {
     event.preventDefault();
     const $data = $(this).serialize();
+    const errorObject = errorCheck($data);
+    const error = errorObject.isError;
 
-    $.post('/tweets', $data)
-      .then(() => {
+    if (!error) {
+      $.post("/tweets", $data).then(() => {
         $(".display-tweets").empty();
         loadTweets();
       });
+      console.log("Success: exiting event handler");
+      return;
+    }
 
+    alert(errorObject.type);
   });
 });
