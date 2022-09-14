@@ -4,65 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Fake data taken from initial-tweets.json
-const data = [
-  {
-    user: {
-      name: "Johnny Ramos",
-      avatars: "https://i.imgur.com/qNNIcnS.png",
-      handle: "@JonRa",
-    },
-    content: {
-      text: "If I have seen further it is by standing on the shoulders of giants",
-    },
-    created_at: 1662996206087,
-  },
-  {
-    user: {
-      name: "Suzanne Shier",
-      avatars: "https://i.imgur.com/Zj5pgKT.png",
-      handle: "@Suzy",
-    },
-    content: {
-      text: "Lol what a day, can't believe I backed into a police station :(",
-    },
-    created_at: 1663082606087,
-  },
-  {
-    user: {
-      name: "DJ Zz",
-      avatars: "https://i.imgur.com/J0Kl9bE.png",
-      handle: "@DJZahoriX1",
-    },
-    content: {
-      text: "Listen to this track I just dropped: https://tcrn.ch/3yJH0vv",
-    },
-    created_at: 1663082606087,
-  },
-  {
-    user: {
-      name: "Rebekah Jacobs",
-      avatars: "https://i.imgur.com/3rEiZ6l.png",
-      handle: "@RebeJay",
-    },
-    content: {
-      text: "I just finished the first 3 episodes of Rings of Power!! Must see!!",
-    },
-    created_at: 1663082606087,
-  },
-  {
-    user: {
-      name: "Jen Rathmussen",
-      avatars: "https://i.imgur.com/gFg9yfI.png",
-      handle: "@Jenner",
-    },
-    content: {
-      text: "Feeling amazing, just got back from Austria last night!",
-    },
-    created_at: 1663082606087,
-  },
-];
-
 const createTweetElement = (data) => {
   const { name, avatars, handle } = data.user;
   const text = data.content.text;
@@ -102,6 +43,35 @@ const renderTweets = (tweetsDB) => {
   });
 };
 
+const loadTweets = () => {
+  $.get('/tweets').then((data) => {
+      renderTweets(data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
 $(() => {
-  renderTweets(data);
+  /**
+   * GET: /tweets
+   */
+
+  loadTweets();
+
+  /**
+   * POST: /tweets
+   */
+
+  $(".tweet-form").on('submit', function(event) {
+    event.preventDefault();
+    const $data = $(this).serialize();
+
+    $.post('/tweets', $data)
+      .then(() => {
+        $(".display-tweets").empty();
+        loadTweets();
+      });
+
+  });
 });
