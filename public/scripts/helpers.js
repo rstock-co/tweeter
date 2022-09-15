@@ -29,6 +29,7 @@ const loadTweets = () => {
 
 const errorCheck = (text) => {
   const tweet = text.slice(5);
+  console.log(tweet.length)
   const error = {
     isError: true,
   };

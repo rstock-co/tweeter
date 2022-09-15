@@ -6,7 +6,9 @@
   width: 100%;
   background-color: #4a63b500;
   color: #ffffff;
-  position: fixed;
+  top: 0;
+  position: absolute;
+  z-index: 2;
 }
 
 .navbar span {
@@ -24,6 +26,10 @@
   color: #e33e2a;
 }
 
+.navbar i:hover {
+  cursor: pointer;
+}
+
 .nav-container {
   display: flex;
   flex-direction: column;
@@ -37,6 +43,8 @@
 /* Desktop styles */
 @media only screen and (min-width: 1024px) {
   .navbar {
+    position: fixed;
+    
     background-color: #4a63b5;
     background-image: url("https://www.transparenttextures.com/patterns/navy.png");
   }

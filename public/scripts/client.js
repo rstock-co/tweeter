@@ -16,15 +16,18 @@ $(() => {
   /**
    * Initializes event handler for POST: /tweets
    */
-
+   
   $(".tweet-form").on("submit", function (event) {
     event.preventDefault();
     const $text = $(this).serialize();
     const errorObject = errorCheck($text);
+    const $counter = $(".counter");
+    console.log("Counter val @ submit: ",$counter.val());
 
     if (!errorObject.isError) {
       $errorMsg.slideUp(500);
       $.post("/tweets", $text).then(() => {
+        $("#tweet-text").val('');
         $(".display-tweets").empty();
         loadTweets();
       });
@@ -39,6 +42,7 @@ $(() => {
    */
 
    $composeButton.on("click", () => {
+    console.log("Triggered event handler for compose")
     $form.slideToggle();
     $("#tweet-text").focus();
   });
