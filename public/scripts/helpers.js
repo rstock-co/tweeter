@@ -34,7 +34,7 @@ const errorCheck = (text) => {
   };
   if (tweet.length > 140)
     error.type =
-      "Your tweet is too long.  Please use the counter to ensure your tweet is 140 characters or less.";
+      "Your tweet is too long.  Please ensure your tweet is 140 characters or less.";
   else if (tweet.length === 0)
     error.type = "Your tweet is empty.  Please type at least one character.";
   else {
@@ -52,4 +52,17 @@ const esc = (str) => {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
+};
+
+const errorHtml = (error) => {
+
+  const $errorMsg = $(".error-msg");
+  $errorMsg.html("");
+  $errorMsg.append(`<div class="err-wrap">
+        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+        <p>${error.type}</p>
+    </div>`);
+  $errorMsg.slideDown(500);
+  console.log($(".error-msg").html());
+  console.log("ErrHtml function made it to end");
 };

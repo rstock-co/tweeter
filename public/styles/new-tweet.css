@@ -36,6 +36,24 @@
   font-family: "Bungee", cursive;
 }
 
+.error-msg {
+  margin-top: 30px;
+}
+
+.err-wrap {
+  display: flex;
+  align-items: center;
+  color: rgb(225, 41, 63);
+  border: 3px solid rgb(225, 41, 63);
+  padding-left: 20px;
+}
+
+.err-wrap p {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  margin-left: 10px;
+}
+
 .red {
-  color: red;
+  color: rgb(225, 41, 63);
 }

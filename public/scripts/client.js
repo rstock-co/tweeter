@@ -1,29 +1,28 @@
 $(() => {
   /**
-   * Load tweets from DB via GET: /tweets
+   * Loads tweets from DB via GET: /tweets
    */
 
   loadTweets();
+  $(".error-msg").hide();
 
   /**
-   * Initialize event handler for POST: /tweets
+   * Initializes event handler for POST: /tweets
    */
 
   $(".tweet-form").on("submit", function (event) {
     event.preventDefault();
     const $text = $(this).serialize();
     const errorObject = errorCheck($text);
-    const error = errorObject.isError;
 
-    if (!error) {
+    if (!errorObject.isError) {
+      $(".error-msg").slideUp(500);
       $.post("/tweets", $text).then(() => {
         $(".display-tweets").empty();
         loadTweets();
       });
-      console.log("Success: exiting event handler");
-      return;
+      return; 
     }
-
-    alert(errorObject.type);
+    errorHtml(errorObject);
   });
 });
