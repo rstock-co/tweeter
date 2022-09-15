@@ -44,9 +44,8 @@ $(() => {
    * Allows user to jump back to the top of page and auto enables textarea
    * Referenced: https://stackoverflow.com/questions/4326845/how-can-i-determine-the-direction-of-a-jquery-scroll-event
    */
-
+  let lastScrollTop = 0;
   $(window).scroll(function () {
-    let lastScrollTop = 0;
     var scrollTop = $(this).scrollTop();
     if (scrollTop > lastScrollTop) {
       $toggleButton.show().fadeIn("slow");
