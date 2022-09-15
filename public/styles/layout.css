@@ -32,3 +32,13 @@ main {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ /* (Stretch): Scroll icon button */
+ .fa-circle-chevron-up {
+  color: #E33E2A;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin-right: 10px;
+  margin-bottom: 30px;
+ }
