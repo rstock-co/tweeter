@@ -23,6 +23,18 @@ $(() => {
       });
       return; 
     }
-    errorHtml(errorObject);
+    displayErrorHtml(errorObject);
   });
+
+  /**
+   * (STRETCH): Form Toggle via Compose button
+   * Makes the form slide up or down when the botton is clicked
+   */
+   
+   $(".fa-solid").on('click', function (event) {
+    const $form = $(".tweet-entry");
+    $form.toggle();
+   })
+
+
 });

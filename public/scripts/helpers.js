@@ -54,15 +54,17 @@ const esc = (str) => {
   return div.innerHTML;
 };
 
-const errorHtml = (error) => {
+/**
+ *  Generates and displays error HTML for new tweet form
+ */
 
+const displayErrorHtml = (error) => {
   const $errorMsg = $(".error-msg");
   $errorMsg.html("");
-  $errorMsg.append(`<div class="err-wrap">
-        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-        <p>${error.type}</p>
+  $errorMsg.append(
+    `<div class="err-wrap">
+      <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+      <p>${error.type}</p>
     </div>`);
   $errorMsg.slideDown(500);
-  console.log($(".error-msg").html());
-  console.log("ErrHtml function made it to end");
 };
