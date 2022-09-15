@@ -30,13 +30,13 @@ $(() => {
   });
 
   /**
-   * (STRETCH): Form Toggle via Compose button
-   * Makes the form toggle between show/hide when the botton is clicked
+   * (STRETCH): Toggle Form Show/Hide via Compose button
+   * Makes the form toggle between show/hide when the botton is clicked (animated)
    */
 
   $(".fa-angles-down").on("click", () => {
     const $form = $(".tweet-entry");
-    $form.toggle();
+    $form.slideToggle();
   });
 
   /**
@@ -44,6 +44,7 @@ $(() => {
    * Allows user to jump back to the top of page and auto enables textarea
    * Referenced: https://stackoverflow.com/questions/4326845/how-can-i-determine-the-direction-of-a-jquery-scroll-event
    */
+  
   let lastScrollTop = 0;
   $(window).scroll(function () {
     var scrollTop = $(this).scrollTop();
