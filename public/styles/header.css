@@ -5,11 +5,9 @@
   width: 100%;
   justify-content: flex-start;
   align-items: center;
-  background-color: #826508;
-  background-image: url("https://www.transparenttextures.com/patterns/hexellence.png");
+  background-color: #bb8d0d;
+  background-image: url("https://www.transparenttextures.com/patterns/skulls.png");
 }
-
-/* background-image: url("https://www.transparenttextures.com/patterns/subtle-grey.png"); */
 
 .main-avatar {
   margin-top: 150px;

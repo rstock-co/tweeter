@@ -3,6 +3,7 @@
   flex-direction: column;
   border: 5px solid;
   margin-top: 60px;
+  margin-bottom: 60px;
   padding: 20px;
 }
 
@@ -60,8 +61,9 @@
   margin-right: 15px;
   margin-top: 10px;
   color: #4056a1;
+  
 }
 
 .fa:hover {
-    color: #bf9f2c;
+    color: #bb8d0d;
 }
