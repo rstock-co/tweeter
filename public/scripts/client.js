@@ -1,13 +1,17 @@
 $(() => {
+  
+  const $errorMsg = $(".error-msg");
+  const $composeButton = $(".fa-angles-down");
+  const $toggleButton = $(".fa-circle-chevron-up");
+  const $form = $(".tweet-entry");
+  $errorMsg.hide();
+  $toggleButton.hide();
+
   /**
    * Loads tweets from DB via GET: /tweets
    */
 
   loadTweets();
-  const $errorMsg = $(".error-msg");
-  const $toggleButton = $(".fa-circle-chevron-up");
-  $errorMsg.hide();
-  $toggleButton.hide();
 
   /**
    * Initializes event handler for POST: /tweets
@@ -34,9 +38,9 @@ $(() => {
    * Makes the form toggle between show/hide when the botton is clicked (animated)
    */
 
-  $(".fa-angles-down").on("click", () => {
-    const $form = $(".tweet-entry");
+   $composeButton.on("click", () => {
     $form.slideToggle();
+    $("#tweet-text").focus();
   });
 
   /**
@@ -57,6 +61,6 @@ $(() => {
   });
 
   $toggleButton.on("click", () => {
-    $("#tweet-text").focus();
+    $('html, body').animate({scrollTop: '0px'}, 0);
   });
 });
