@@ -3,6 +3,10 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
 
     <!-- External CSS -->
     <link
@@ -53,6 +57,7 @@
   </head>
 
   <body>
+
     <!-- Top nav bar (fixed) -->
     <nav class="navbar">
       <p><span>Tweeter</span></p>
@@ -62,32 +67,32 @@
       </div>
     </nav>
 
+    <!-- Header -->
     <header class="header">
       <div>
         <img class="main-avatar" src="/images/profile-main.png" />
       </div>
       <br />
       <div>
-        <h2 class="name">Richard <span>Stock</span></h2>
+        <h2 class="name">&nbsp;Richard <span>Stock</span></h2>
       </div>
     </header>
 
     <!-- Page-specific (main) content here -->
     <main class="main container">
-
       <!-- Stretch: Nav button when scrolling -->
       <i class="fa-solid fa-circle-chevron-up fa-3x"></i>
 
       <!-- New tweet form -->
       <section class="tweet-entry">
-
         <!-- Sliding Error Message -->
         <div class="error-msg"></div>
 
         <h2>Compose Tweet</h2>
         <form class="tweet-form">
           <label class="label" for="tweet-text"
-            >What are you humming about?</label>
+            >What are you humming about?</label
+          >
           <textarea name="text" id="tweet-text"></textarea>
           <div class="tweet-entry-footer">
             <button class="tweet-button" type="submit">Tweet</button>

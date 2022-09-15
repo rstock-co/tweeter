@@ -2,6 +2,7 @@
   display: flex;
   flex-flow: column;
   width: 100%;
+  margin-bottom: 70px;
 }
 
 .tweet-button {
@@ -57,4 +58,12 @@
 
 .red {
   color: rgb(225, 41, 63);
+}
+
+@media only screen and (min-width: 1024px) {
+  .tweet-entry {
+    width: 55%;
+    float: right;
+    margin-top: 6em;
+  }
 }

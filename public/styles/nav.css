@@ -4,11 +4,9 @@
   align-items: center;
   height: 120px;
   width: 100%;
-  background-color: #4a63b5;
-  background-image: url("https://www.transparenttextures.com/patterns/navy.png");
+  background-color: #4a63b500;
   color: #ffffff;
   position: fixed;
-  z-index: 2;
 }
 
 .navbar span {
@@ -23,7 +21,7 @@
 }
 
 .navbar i {
-    color: #E33E2A
+  color: #e33e2a;
 }
 
 .nav-container {
@@ -33,5 +31,13 @@
 }
 
 .nav-item {
-    align-items: center;
+  align-items: center;
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  .navbar {
+    background-color: #4a63b5;
+    background-image: url("https://www.transparenttextures.com/patterns/navy.png");
+  }
 }

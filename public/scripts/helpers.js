@@ -1,5 +1,5 @@
 /**
- *  Loops through all tweets in DB and renders each one
+ *  Renders all tweets in database
  */
 
 const renderTweets = (tweetsDB) => {
