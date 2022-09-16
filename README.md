@@ -14,14 +14,14 @@ Tweeter is a simple, single-page Twitter clone.
 
 - Homepage:
 
-![Homepage](https://github.com/rstock-co/tweeter/blob/main/docs/home-screen.png)
+![Homepage](https://github.com/rstock-co/tweeter/blob/master/docs/home-screen.png)
 
 - Tweets:
 
-![Tweets](https://github.com/rstock-co/tweeter/blob/main/docs/tweets.png)
+![Tweets](https://github.com/rstock-co/tweeter/blob/master/docs/tweets.png)
 
 - Error Handling:
-![Error](https://github.com/rstock-co/tweeter/blob/main/docs/too-long-tweet.png)
+![Error](https://github.com/rstock-co/tweeter/blob/master/docs/too-long-tweet.png)
 
 ## Dependencies
 
