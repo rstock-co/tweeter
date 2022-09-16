@@ -61,11 +61,10 @@
   margin-right: 15px;
   margin-top: 10px;
   color: #4056a1;
-  
 }
 
 .fa:hover {
-    color: #bb8d0d;
+  color: #bb8d0d;
 }
 
 @media only screen and (min-width: 1024px) {

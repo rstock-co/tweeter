@@ -4,7 +4,7 @@
   align-items: center;
   height: 120px;
   width: 100%;
-  background-color: #4a63b500;
+  background-color: rgba(74, 99, 181, 0);
   color: #ffffff;
   top: 0;
   position: absolute;
@@ -44,7 +44,6 @@
 @media only screen and (min-width: 1024px) {
   .navbar {
     position: fixed;
-    
     background-color: #4a63b5;
     background-image: url("https://www.transparenttextures.com/patterns/navy.png");
   }

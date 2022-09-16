@@ -6,6 +6,7 @@
 html {
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
@@ -15,7 +16,6 @@ html {
 /*
  * Global layout stuff
  */
-
 body {
   color: #545149;
   background-color: #f4f1ec;
@@ -24,30 +24,29 @@ body {
 }
 
 main {
-  position:absolute; 
-  left:5%; 
-  right:5%;
+  position: absolute;
+  left: 5%;
+  right: 5%;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-
- /* (Stretch): Scroll icon button */
- .fa-circle-chevron-up {
+/* (Stretch): Scroll icon button */
+.fa-circle-chevron-up {
   color: #E33E2A;
   position: fixed;
   right: 0;
   bottom: 0;
   margin-right: 10px;
   margin-bottom: 30px;
- }
+}
 
- .fa-circle-chevron-up:hover {
+.fa-circle-chevron-up:hover {
   cursor: pointer;
 }
 
- @media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   body {
     padding-top: 120px;
   }
