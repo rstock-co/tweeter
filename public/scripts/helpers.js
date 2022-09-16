@@ -24,7 +24,7 @@ const loadTweets = () => {
 };
 
 /**
- *  Error checks the tweet text and returns an error object
+ *  Error checks the tweet text and returns an error message
  */
 
   const errorCheck = (chars) => {
