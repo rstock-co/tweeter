@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #bb8d0d;
+  background-image: url("https://www.transparenttextures.com/patterns/skulls.png");
+}
+
+.main-avatar {
+  margin-top: 5em;
+  height: 263px;
+  width: 220px;
+}
+
+.name {
+  margin-top: -0.8em;
+  color: #ffffff;
+}
+
+.name span {
+  font-weight: 300;
+}
+
+@media only screen and (min-width: 1024px) {
+  .header {
+    height: 40vh;
+    width: 30%;
+    float: left;
+    margin-left: 3em;
+    margin-top: 70px;
+  }
+  .main-avatar {
+    margin-top: 1em;
+  }
+}
