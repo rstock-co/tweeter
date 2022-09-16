@@ -16,6 +16,8 @@
   &-body {
     font-weight: 600;
     margin-left: 20px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
   }
 
   &-footer {
