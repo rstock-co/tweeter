@@ -41,7 +41,7 @@ main {
   margin-right: 10px;
   margin-bottom: 30px;
 }
-.fa-circle-chevron-up hover {
+.fa-circle-chevron-up:hover {
   cursor: pointer;
 }
 

@@ -29,7 +29,7 @@ $(() => {
       $errorMsg.slideUp(500);
       const $text = $(this).serialize();
       $.post("/tweets", $text).then(() => {
-        $textBox.val('');
+        $textBox.val('').css("height","40px");
         $counter.val(140);
         $(".display-tweets").empty();
         loadTweets();
