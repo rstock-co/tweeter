@@ -9,42 +9,43 @@
   top: 0;
   position: absolute;
   z-index: 2;
+
+  span {
+    font-family: "Bungee", cursive;
+    font-size: 50px;
+  }
+
+  p {
+    margin-right: 1.5em;
+    margin-left: 1.5em;
+    margin-bottom: 0em;
+  }
+
+  i {
+    color: #e33e2a;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 
-.navbar span {
-  font-family: "Bungee", cursive;
-  font-size: 50px;
-}
+.nav {
+  &-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-.navbar p {
-  margin-right: 1.5em;
-  margin-left: 1.5em;
-  margin-bottom: 0em;
-}
-
-.navbar i {
-  color: #e33e2a;
-}
-
-.navbar i:hover {
-  cursor: pointer;
-}
-
-.nav-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.nav-item {
-  align-items: center;
+  &-item {
+    align-items: center;
+  }
 }
 
 /* Desktop styles */
 @media only screen and (min-width: 1024px) {
   .navbar {
     position: fixed;
-    
     background-color: #4a63b5;
     background-image: url("https://www.transparenttextures.com/patterns/navy.png");
   }
