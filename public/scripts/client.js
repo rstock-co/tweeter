@@ -3,7 +3,9 @@ $(() => {
   const $errorMsg = $(".error-msg");
   const $composeButton = $(".fa-angles-down");
   const $toggleButton = $(".fa-circle-chevron-up");
-  const $form = $(".tweet-entry");
+  const $counter = $(".counter");
+  const $textBox = $("#tweet-text");
+
   $errorMsg.hide();
   $toggleButton.hide();
 
@@ -15,25 +17,26 @@ $(() => {
 
   /**
    * Initializes event handler for POST: /tweets
+   * Checks for errors
    */
    
   $(".tweet-form").on("submit", function (event) {
     event.preventDefault();
-    const $text = $(this).serialize();
-    const errorObject = errorCheck($text);
-    const $counter = $(".counter");
-    console.log("Counter val @ submit: ",$counter.val());
 
-    if (!errorObject.isError) {
+    const error = errorCheck($counter.val());
+
+    if (error === '') {
       $errorMsg.slideUp(500);
+      const $text = $(this).serialize();
       $.post("/tweets", $text).then(() => {
-        $("#tweet-text").val('');
+        $textBox.val('');
+        $counter.val(140);
         $(".display-tweets").empty();
         loadTweets();
       });
       return;
     }
-    displayErrorHtml(errorObject);
+    displayErrorHtml(error);
   });
 
   /**
@@ -42,9 +45,8 @@ $(() => {
    */
 
    $composeButton.on("click", () => {
-    console.log("Triggered event handler for compose")
-    $form.slideToggle();
-    $("#tweet-text").focus();
+    $(".tweet-entry").slideToggle();
+    $textBox.focus();
   });
 
   /**

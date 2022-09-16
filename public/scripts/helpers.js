@@ -27,22 +27,14 @@ const loadTweets = () => {
  *  Error checks the tweet text and returns an error object
  */
 
-const errorCheck = (text) => {
-  const tweet = text.slice(5);
-  console.log(tweet.length)
-  const error = {
-    isError: true,
-  };
-  if (tweet.length > 140)
-    error.message =
-      "Your tweet is too long.  Please ensure your tweet is 140 characters or less.";
-  else if (tweet.length === 0)
-    error.message = "Your tweet is empty.  Please type at least one character.";
-  else {
-    error.isError = false;
-  }
-
-  return error;
+  const errorCheck = (chars) => {
+    if (Number(chars) < 0) {
+      return "Your tweet is too long.  Please ensure your tweet is 140 characters or less.";
+    }
+    if (Number(chars)  === 140) {
+      return "Your tweet is empty.  Please type at least one character.";
+    }
+    return '';
 };
 
 /**
@@ -65,7 +57,7 @@ const displayErrorHtml = (error) => {
   $errorMsg.append(
     `<div class="err-wrap">
       <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-      <p>${error.message}</p>
+      <p>${error}</p>
     </div>`);
   $errorMsg.slideDown(500);
 };
